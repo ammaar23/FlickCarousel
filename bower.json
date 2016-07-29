@@ -1,0 +1,25 @@
+{
+  "name": "FlickCarousel",
+  "homepage": "https://github.com/ammaar23/FlickCarousel",
+  "authors": [
+    "Ammaar Latif"
+  ],
+  "description": "A simple, slick and responsive javascript carousel.",
+  "main": "flick-carousel.js",
+  "keywords": [
+    "Carousel",
+    "FlickCarousel",
+    "Javascript Carousel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
