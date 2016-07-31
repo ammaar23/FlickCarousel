@@ -53,7 +53,7 @@
                                 pagesBar: $bullets,
                                 activatePageOn: "click",
                                 pageBuilder: function() {
-                                    return '<i class="sly-bullets-item" />';
+                                    return '<i class="flick-bullets-item" />';
                                 }
                             };
                         if (horizontal === false) {
