@@ -1,0 +1,35 @@
+{
+  "name": "flick-carousel",
+  "version": "1.0.0",
+  "description": "A simple, slick and responsive javascript carousel.",
+  "main": "flick-carousel.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "test/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ammaar23/FlickCarousel.git"
+  },
+  "keywords": [
+    "Carousel",
+    "FlickCarousel",
+    "Javascript Carousel"
+  ],
+  "author": "Ammaar Latif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ammaar23/FlickCarousel/issues"
+  },
+  "homepage": "https://github.com/ammaar23/FlickCarousel#readme"
+}

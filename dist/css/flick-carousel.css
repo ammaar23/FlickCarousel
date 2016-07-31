@@ -1,0 +1,131 @@
+.flick-carousel {
+  position: relative;
+}
+
+.flick-carousel .flick-content {
+  height: 100% !important;
+}
+
+.flick-carousel.flick-carousel-single .flick-content {
+  width: 20000% !important;
+}
+
+.flick-carousel.flick-carousel-vertical .flick-content {
+  height: 20000% !important;
+  width: 100% !important;
+}
+
+.flick-carousel .flick-content .flick-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 0.5%;
+}
+
+.flick-carousel.flick-carousel-vertical .flick-content .flick-item {
+  height: 0.5%;
+  width: 100%;
+}
+
+.flick-carousel .flick-bullets {
+  bottom: 40px;
+  font-size: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  z-index: 50;
+}
+
+.flick-carousel.flick-carousel-vertical .flick-bullets {
+  bottom: 50%;
+  left: auto;
+  right: 40px;
+  width: auto;
+  -ms-transform: translateY(50%);
+      transform: translateY(50%);
+}
+
+.flick-carousel .flick-bullets .flick-bullets-item {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px;
+  margin: 0 10px;
+  vertical-align: top;
+  width: 10px;
+  transition: background-color .175s;
+}
+
+.flick-carousel.flick-carousel-vertical .flick-bullets .flick-bullets-item {
+  display: block;
+  margin: 15px 0;
+}
+
+.flick-carousel .flick-bullets .flick-bullets-item.active {
+  background-color: #fff;
+}
+
+.flick-prev,
+.flick-next {
+  background: no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin-top: -10px;
+  outline: 0;
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  z-index: 50;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+}
+.flick-prev.disabled,
+.flick-next.disabled {
+  opacity: 0.5;
+}
+
+.flick-prev {
+  background-image: url(../images/svgs/sly_carousel_left_arrow.svg);
+  left: 15px;
+  transition-property: left;
+}
+
+.flick-next {
+  background-image: url(../images/svgs/sly_carousel_right_arrow.svg);
+  right: 15px;
+  transition-property: right;
+}
+
+@media (min-width: 768px) {
+  .flick-carousel .flick-bullets {
+    bottom: 40px;
+  }
+
+  .flick-prev {
+    left: 50px;
+  }
+
+  .flick-prev:hover,
+  .flick-prev:focus {
+    left: 40px;
+  }
+
+  .flick-next {
+    right: 50px;
+  }
+
+  .flick-next:hover,
+  .flick-next:focus {
+    right: 40px;
+  }
+}
