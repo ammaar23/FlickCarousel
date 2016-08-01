@@ -133,4 +133,6 @@
         }
     };
     
+    Flick.run();
+    
 })(jQuery, window, document);
