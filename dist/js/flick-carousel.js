@@ -35,9 +35,9 @@
                             $bullets = $carousel.find('.flick-bullets'),
                             $prev = $carousel.find('.flick-prev'),
                             $next = $carousel.find('.flick-next'),
-                            horizontal = (Flick.device.isMobile) ? true : $carousel.data('horizontal'),
+                            horizontal = $carousel.data('horizontal'),
                             options = {
-                                horizontal: (horizontal) ? horizontal : true,
+                                horizontal: horizontal,
                                 itemNav: "basic",
                                 smart: true,
                                 activateOn: "click",
@@ -49,7 +49,7 @@
                                 cycleInterval: ($carousel.data('cycle-interval')) ? $carousel.data('cycle-interval') : 4000,
                                 speed: ($carousel.data('speed')) ? $carousel.data('speed') : 1000,
                                 elasticBounds: true,
-                                //easing: "easeOutExpo",
+                                easing: ($carousel.data('easing')) ? $carousel.data('easing') : "swing",
                                 pauseOnHover: true,
                                 startPaused: true,
                                 pagesBar: $bullets,
@@ -80,17 +80,6 @@
                         if ($carousel.data('auto') === true) {
                             $carousel.sly('resume');
                         }
-                        $carousel.sly('on', 'load', function() {
-                            if ($carousel.data('horizontal') === false) {
-                                if (Flick.device.isMobile) {
-                                    $carousel.sly('set', {horizontal: true});
-                                    $carousel.removeClass('flick-carousel-vertical');
-                                } else {
-                                    $carousel.sly('set', {horizontal: false});
-                                    $carousel.addClass('flick-carousel-vertical');
-                                }
-                            }
-                        });
                         $carousel.sly('on', 'moveEnd', function() {
                             var position = this.pos;
                             if (position.cur === position.end) {
@@ -106,13 +95,6 @@
                         });
                         Flick.window.on('resize load', function() {
                             $carousel.sly('reload');
-                            if ($carousel.hasClass('flick-mobile-only') && !Flick.device.isMobile) {
-                                $carousel.sly(false);
-                                $carousel.removeClass('flick-carousel');
-                            } else {
-                                $carousel.addClass('flick-carousel');
-                                $carousel.sly(options);
-                            }
                         });
                     });
                 },
