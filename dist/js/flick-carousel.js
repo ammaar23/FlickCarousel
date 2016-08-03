@@ -58,8 +58,10 @@
                                     return '<i class="flick-bullets-item" />';
                                 }
                             };
-                        if (horizontal === false) {
+                        if (!Flick.device.isMobile && horizontal === false) {
                             $carousel.addClass('flick-carousel-vertical');
+                        } else {
+                            options.horizontal = true;
                         }
                         if ($carousel.data('controls-outside') === true) {
                             $prev = $carousel.next('.flick-prev');
@@ -80,6 +82,17 @@
                         if ($carousel.data('auto') === true) {
                             $carousel.sly('resume');
                         }
+                        $carousel.sly('on', 'load', function() {
+                            if (horizontal === false) {
+                                if (Flick.device.isMobile) {
+                                    $carousel.sly('set', {horizontal: true});
+                                    $carousel.removeClass('flick-carousel-vertical');
+                                } else {
+                                    $carousel.sly('set', {horizontal: false});
+                                    $carousel.addClass('flick-carousel-vertical');
+                                }
+                            }
+                        });
                         $carousel.sly('on', 'moveEnd', function() {
                             var position = this.pos;
                             if (position.cur === position.end) {
@@ -93,7 +106,7 @@
                                 $prev.removeClass('disabled').prop('disabled', false);
                             }
                         });
-                        Flick.window.on('resize load', function() {
+                        Flick.window.on('resize', function() {
                             $carousel.sly('reload');
                         });
                     });
