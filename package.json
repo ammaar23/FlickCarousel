@@ -1,6 +1,6 @@
 {
   "name": "flick-carousel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple, slick and responsive javascript carousel.",
   "main": "flick-carousel.js",
   "dependencies": {},
