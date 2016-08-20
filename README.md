@@ -26,6 +26,17 @@ HTML structure to setup the carousel
     <div class="flick-bullets"></div>
 </div>
 ```
+HTML data attributes to set carousel options
+``` html
+data-horizontal="true" // Switch to horizontal or vertical mode.
+data-auto="true" // Start the carousel automatically.
+data-easing="easeOutExpo" // Easing for duration based (tweening) animations. Can be: 'swing', 'easeOutExpo', etc. For more easing options visit http://api.jqueryui.com/easings
+data-cycle-by="items" // Enable automatic cycling by 'items' or 'pages'.
+data-cycle-interval="4000" // Delay between cycles in milliseconds.
+data-speed="1000" // Animations speed in milliseconds. 0 to disable animations.
+```
+## Example
+To view some examples run `test/index.html`
 ## License
 FlickCarousel is released under the [MIT license](http://desandro.mit-license.org). Have at it.
 * * *
