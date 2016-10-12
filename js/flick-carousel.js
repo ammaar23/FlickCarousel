@@ -17,8 +17,8 @@
         functions: {
             checkDevice: {
                 resize: function() {
-                    Flick.device.isMobile = (Flick.window.width() < (Flick.device.width.mobile - 17)) ? true : false;
-                    Flick.device.isTablet = (Flick.window.width() < (Flick.device.width.tablet - 17)) ? true : false;
+                    Flick.device.isMobile = (Flick.window.width() < Flick.device.width.mobile) ? true : false;
+                    Flick.device.isTablet = (Flick.window.width() < Flick.device.width.tablet) ? true : false;
                 },
                 init: function() {
                     Flick.window.on('resize', this.resize);
