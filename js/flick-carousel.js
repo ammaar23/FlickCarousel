@@ -29,6 +29,7 @@
                 build: function() {
                     $('.flick-carousel').each(function() {
                         var $carousel = $(this),
+                            $carouselParent = $carousel.parent(),
                             $items = $carousel.find('.flick-item'),
                             $bullets = $carousel.find('.flick-bullets'),
                             $prev = $carousel.find('.flick-prev'),
@@ -62,9 +63,9 @@
                             options.horizontal = true;
                         }
                         if ($carousel.data('controls-outside') === true) {
-                            $prev = $carousel.next('.flick-prev');
-                            $next = $prev.next('.flick-next');
-                            options.pagesBar = $next.next('.flick-bullets');
+                            $prev = $carouselParent.find('.flick-prev');
+                            $next = $carouselParent.find('.flick-next');
+                            options.pagesBar = $carouselParent.find('.flick-bullets');
                         }
                         if ($carousel.data('cycle-by') === "pages") {
                             options.prevPage = $prev;
