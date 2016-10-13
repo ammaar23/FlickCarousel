@@ -34,6 +34,7 @@ data-easing="easeOutExpo" // Easing for duration based (tweening) animations. Ca
 data-cycle-by="items" // Enable automatic cycling by 'items' or 'pages'.
 data-cycle-interval="4000" // Delay between cycles in milliseconds.
 data-speed="1000" // Animations speed in milliseconds. 0 to disable animations.
+data-controls-outside="true" // Enable controls outside carousel container.
 ```
 ## Example
 To view some examples run `test/index.html`

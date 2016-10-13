@@ -64,6 +64,7 @@
                         if ($carousel.data('controls-outside') === true) {
                             $prev = $carousel.next('.flick-prev');
                             $next = $prev.next('.flick-next');
+                            options.pagesBar = $next.next('.flick-bullets');
                         }
                         if ($carousel.data('cycle-by') === "pages") {
                             options.prevPage = $prev;
