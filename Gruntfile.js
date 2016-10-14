@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '<%= cssDistPath %>/flick-carousel.css': '<%= sassAssetsPath %>/flick-carousel.scss'
+                    '<%= cssDistPath %>/flick-carousel.css': '<%= sassAssetsPath %>/build.scss'
                 }
             }
         },

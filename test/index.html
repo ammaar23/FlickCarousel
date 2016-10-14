@@ -14,6 +14,12 @@
             .height-500 {
                 height: 500px;
             }
+            .height-600 {
+                height: 600px;
+            }
+            .bg-black {
+                background-color: #000;
+            }
         </style>
     </head>
     <body>
@@ -23,11 +29,29 @@
                 <div class="col-xs-12 no-padding">
                     <h2>Simple Horizontal Carousel</h2>
                 </div>
-                <div class="col-xs-12 flick-carousel flick-carousel-single height-500 no-padding" data-horizontal="true" data-auto="true" data-easing="easeOutExpo">
-                    <div class="flick-content">
-                        <div class="flick-item" style="background-image: url('images/img1.jpg');"></div>
-                        <div class="flick-item" style="background-image: url('images/img2.jpg');"></div>
-                        <div class="flick-item" style="background-image: url('images/img3.jpg');"></div>
+                <div class="col-xs-12 flick-carousel-wrapper height-500 no-padding">
+                    <div class="col-xs-12 flick-carousel flick-carousel-single height-500 no-padding" data-horizontal="true" data-auto="true" data-easing="easeOutExpo">
+                        <div class="flick-content">
+                            <div class="flick-item" style="background-image: url('images/img1.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img2.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img3.jpg');"></div>
+                        </div>
+                        <button class="flick-prev" type="button"></button>
+                        <button class="flick-next" type="button"></button>
+                        <div class="flick-bullets"></div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 no-padding">
+                    <h2>Simple Horizontal Carousel With Controls Outside</h2>
+                </div>
+                <div class="col-xs-12 flick-carousel-wrapper height-600 no-padding bg-black">
+                    <div class="col-xs-12 flick-carousel flick-carousel-single height-500 no-padding" data-horizontal="true" data-auto="true" data-easing="easeOutExpo" data-controls-outside="true">
+                        <div class="flick-content">
+                            <div class="flick-item" style="background-image: url('images/img1.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img2.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img3.jpg');"></div>
+                        </div>
                     </div>
                     <button class="flick-prev" type="button"></button>
                     <button class="flick-next" type="button"></button>
@@ -37,15 +61,17 @@
                 <div class="col-xs-12 no-padding">
                     <h2>Simple Vertical Carousel</h2>
                 </div>
-                <div class="col-xs-12 flick-carousel flick-carousel-single height-500 no-padding" data-horizontal="false" data-auto="true">
-                    <div class="flick-content">
-                        <div class="flick-item" style="background-image: url('images/img1.jpg');"></div>
-                        <div class="flick-item" style="background-image: url('images/img2.jpg');"></div>
-                        <div class="flick-item" style="background-image: url('images/img3.jpg');"></div>
+                <div class="col-xs-12 flick-carousel-wrapper height-500 no-padding">
+                    <div class="col-xs-12 flick-carousel flick-carousel-single height-500 no-padding" data-horizontal="false" data-auto="true">
+                        <div class="flick-content">
+                            <div class="flick-item" style="background-image: url('images/img1.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img2.jpg');"></div>
+                            <div class="flick-item" style="background-image: url('images/img3.jpg');"></div>
+                        </div>
+                        <button class="flick-prev" type="button"></button>
+                        <button class="flick-next" type="button"></button>
+                        <div class="flick-bullets"></div>
                     </div>
-                    <button class="flick-prev" type="button"></button>
-                    <button class="flick-next" type="button"></button>
-                    <div class="flick-bullets"></div>
                 </div>
                 
             </div>

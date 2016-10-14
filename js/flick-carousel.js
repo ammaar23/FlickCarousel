@@ -29,7 +29,7 @@
                 build: function() {
                     $('.flick-carousel').each(function() {
                         var $carousel = $(this),
-                            $carouselParent = $carousel.parent(),
+                            $carouselParent = $carousel.parents('.flick-carousel-wrapper'),
                             $items = $carousel.find('.flick-item'),
                             $bullets = $carousel.find('.flick-bullets'),
                             $prev = $carousel.find('.flick-prev'),
@@ -58,7 +58,7 @@
                                 }
                             };
                         if (!Flick.device.isMobile && horizontal === false) {
-                            $carousel.addClass('flick-carousel-vertical');
+                            $carouselParent.addClass('flick-carousel-vertical');
                         } else {
                             options.horizontal = true;
                         }
@@ -86,10 +86,10 @@
                             if (horizontal === false) {
                                 if (Flick.device.isMobile) {
                                     $carousel.sly('set', {horizontal: true});
-                                    $carousel.removeClass('flick-carousel-vertical');
+                                    $carouselParent.removeClass('flick-carousel-vertical');
                                 } else {
                                     $carousel.sly('set', {horizontal: false});
-                                    $carousel.addClass('flick-carousel-vertical');
+                                    $carouselParent.addClass('flick-carousel-vertical');
                                 }
                             }
                         });
